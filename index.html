@@ -9,26 +9,53 @@
   <script src="assets/javascript/game.js" defer></script>
 </head>
 <body>
-    <div class = 'container'>
-        <h1 id = 'title'>HANGMAN</h1>
-
-        <div class='game'>
-          <h2>Start Game</h2>
-         
-      </div>
-
-
-
-
-
-
-
-
+  <body>
+    <!--Main Heading-->
+    <div class='title'>
+        <h1>Favorite Foods HANGMAN!</h1>
     </div>
 
+    <div class='background'>
+        <div class='container'>
+            <h2>Press Any Button To Start!</h2>
+            <div>
+                <img id='image' src='./assets/images/' width='40%' height='200'>
+            </div>
 
+            <!--Current Word Container-->
+            <div>
+                <h3 id='currentword'>_ _ _ _ _</h3>
+            </div>
+            <div id='scoreboard'>
+                <!--Guesses left Container-->
+                <div class='sidebar'>
+                    <h3>GUESSES LEFT:
+                        <span id="guessesleft"></span>
+                    </h3>
+                </div>
 
+                <!--Wins counter Container-->
+                <div class='sidebar'>
+                    <h3>WINS:
+                        <span id='winscounter'></span>
+                    </h3>
+                </div>
+                <!--Loss counter Container-->
+                <div class='sidebar'>
+                    <h3>LOSSES:
+                        <span id="loss"></span>
+                    </h3>
+                </div>
 
+                <!--Wrong guesses container-->
+                <div class='sidebar'>
+                    <h3>LETTERS YOU GUESSED WRONG:
+                        <span id="playerguesses"></span>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
