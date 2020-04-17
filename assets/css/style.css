@@ -1,34 +1,47 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 body {
-    font: normal 16px Arial, helvetica, 
-        sans-serif;
-    background-color:#f4f4f4;
-    color: #555555;
-    line-height: 1.6em;
-    margin: 0;
-
+  font: normal 16px Arial, helvetica, sans-serif;
+  background-color: #f4f4f4;
+  color:white;
+  line-height: 1.6em;
+  margin: 0;
+  background-image: url(https://ae01.alicdn.com/kf/HTB1niqfXcrrK1RjSspaq6AREXXa4/Laeacco-Vegetables-Wooden-Board-Scene-Baby-Children-Photography-Backgrounds-Customized-Photographic-Backdrops-For-Photo-Studio.jpg;);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 1100px;
 }
 
-.game{
-    border:1px #ccc solid;
-    padding:10px;
-    border-radius:15px;
+.game {
+  border: 1px #ccc solid;
+  padding: 10px;
+  border-radius: 15px;
 }
-.container{
-    width: 80%;
-    margin: auto;
+.container {
+  width: 80%;
+  margin: auto;
+  text-align: center;
 }
 
-h1{
-    font-family:Tahoma;
-    font-weight: 800;
-    font-style:oblique;
-    text-decoration: underline;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    word-spacing: 1em;
-    color:midnightblue;
+h1 {
+  font-family:Verdana, Geneva, Tahoma, sans-serif ;
+  font-weight: 800;
+  font-style: oblique;
+  text-decoration: underline;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  word-spacing: 1em;
+  
+  
+}
+.title {
+  text-align: center;
+  
+}
 
+#scoreboard{
+    font-size: larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

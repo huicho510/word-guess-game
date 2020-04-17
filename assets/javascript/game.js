@@ -1,5 +1,5 @@
-let words = ["pizza", "tacos", "noodles", "curry"];
-let randomWord = " ";
+let words = ['pizza', 'tacos', 'noodles', 'curry'];
+let randomWord = ' ';
 let wordLength = [];
 let spaces = 0;
 let spacesLeft = [];
@@ -12,26 +12,37 @@ let guessesLeft = 7;
 function playHangman() {
   randomWord = words[Math.floor(Math.random() * words.length)];
 
-  wordLength = randomWord.split("");
+  wordLength = randomWord.split('');
 
   spaces = wordLength.length;
 
   for (let i = 0; i < spaces; i++) {
-    spacesLeft.push("_");
+    spacesLeft.push('_');
   }
 
-  document.getElementById("currentword").innerHTML = " " + spacesLeft.join(" ");
+  document.getElementById('currentword').innerHTML = ' ' + spacesLeft.join(' ');
 
   console.log(randomWord, spacesLeft, spaces, wordLength);
 }
 
-let pizza = document.getElementById("pizza");
+let pizza = document.getElementById('pizza');
 
 function img() {
   if (randomWord === words[0]) {
-    document.getElementById("image").src = "./assets/images/pizza.jpg";
+    document.getElementById('image').src = './assets/images/pizza.jpg';
   }
+  else if (randomWord === words[1]) {
+          document.getElementById('image').src='./assets/images/tacos.jpg';
+  }
+  else if (randomWord === words[2]) {
+        document.getElementById('image').src='./assets/images/noodles.jpg';
 }
+else if (randomWord === words[3]) {
+        document.getElementById('image').src='./assets/images/curry.jpg';
+}        
+
+};
+
 
 function reset() {
   guessesLeft = 7;
@@ -61,7 +72,7 @@ function referee(letter) {
 }
 function complete() {
   console.log(
-    "wins:" + wins + "| losses:" + losses + "| guesses left:" + guessesLeft
+    'wins:' + wins + '| losses:' + losses + '| guesses left:' + guessesLeft
   );
 
   if (wordLength.toString() == spacesLeft.toString()) {
@@ -69,16 +80,16 @@ function complete() {
     img();
     reset();
 
-    document.getElementById("winscounter").innerHTML = " " + wins;
+    document.getElementById('winscounter').innerHTML = ' ' + wins;
   } else if (guessesLeft === 0) {
     losses++;
     reset();
-    document.getElementById("image").src = "./assets/images/";
-    document.getElementById("loss").innerHTML = " " + losses;
+    document.getElementById('image').src = './assets/images/failed.jpg';
+    document.getElementById('loss').innerHTML = ' ' + losses;
   }
 
-  document.getElementById("currentword").innerHTML = " " + spacesLeft.join(" ");
-  document.getElementById("guessesleft").innerHTML = " " + guessesLeft;
+  document.getElementById('currentword').innerHTML = ' ' + spacesLeft.join(' ');
+  document.getElementById("guessesleft").innerHTML = ' ' + guessesLeft;
 }
 
 playHangman();
@@ -90,6 +101,6 @@ document.onkeyup = function (event) {
 
   console.log(guesses);
 
-  document.getElementById("playerguesses").innerHTML =
-    "  " + wrongLetter.join(" ");
+  document.getElementById('playerguesses').innerHTML =
+    '  ' + wrongLetter.join(' ');
 };
